@@ -2,11 +2,11 @@
 %form(method="post" action="/calc.html")
   %label(for="expression") Input your expression, please.
   %br
-  %input(type="text" id="expression" name="expression" value="#{@expression}")
+  %input(type="text" id="expression" name="expression" value="")
   %br
   %br
   %input(type="submit")
 
 - if @result
   %h4 Result
-  %input(type="text" name="result" value="#{@result}")
+  %b= @expression + ' = ' + @result
